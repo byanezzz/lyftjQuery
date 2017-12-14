@@ -1,0 +1,175 @@
+<!-- Agrega aquí la estructura HTML de tu sitio web -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name = "viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Lyft</title>
+  <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/intlTelInput.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!--splash--> 
+   <!-- <div class="row">
+    <div class="col-xs-12 preload">
+      <div class="row">
+        <div class="col-xs-6 logo center-block">
+          <img src="assets/img/logo-white.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div> --> 
+  <!--fin splash--> 
+  <section class="index"> 
+    <div class="row">
+      <div class="col-xs-8 logo center-block">
+        <img src="assets/img/lyft-lyfe.svg" alt="">     
+      </div>
+    </div>  
+    <div class="row">
+      <div class="col-xs-12 buttons">
+        <a class="btn btn-default" id="login" href="#" role="button">LOGIN</a>
+        <a class="btn btn-default" id="singUp" href="#" role="button">SIGN UP</a>       
+      </div>
+    </div>
+  </section>
+  <section class="singUp"> 
+    <div class="row">
+      <div class="col-xs-1 arrow">
+          <i class="fa fa-chevron-left left" aria-hidden="true"></i>
+      </div>
+      <div class="bodySection col-xs-10">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Sing Up</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+              <h5>Join now for free ride credit</h5>
+            </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-8 inputPhone center-block">
+            <input type="tel" id="demo" placeholder="" maxlength="10">  
+            <h5>We'll send a text to verify your phone</h5>        
+        </div>
+        <input class="btn btn-default btn-block next" disabled type="submit" value="NEXT">
+      </div>      
+  </section>
+  <section class="verify"> 
+    <div class="row">
+      <div class="col-xs-1 arrow">
+          <i class="fa fa-chevron-left left" aria-hidden="true"></i>
+      </div>
+      <div class="bodySection col-xs-10">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Verify phone number</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+              <h5>Join now for free ride credit</h5>
+            </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-6 boxCode">
+            <div class="row form-group">
+              <label class="col-xs-offset-3 col-xs-3">LAB-</label>
+              <input class="col-xs-5 inputCode" type="text" placeholder="_ _ _"class="form-control" maxlength="3">
+            </div>
+            <h5>enter the code send to <span id="phone"></span></h5>    
+            <input id="resend" class="col-xs-offset-2 btn btn-default" type="submit" value="Resend Code">            
+        </div>
+        <input class="btn btn-default btn-block next" disabled type="submit" value="NEXT">
+      </div>        
+  </section>
+  <section class="login"> 
+    <div class="row">
+      <div class="col-xs-1 arrow">
+          <i class="fa fa-chevron-left left" aria-hidden="true"></i>
+      </div>
+      <div class="bodySection col-xs-10">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Sing Up</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+              <h5>Join now for free ride credit</h5>
+            </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-6 boxCode">
+            <div class="row form-group">
+              <div class="input-group">
+                <span class="input-group-addon primary"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input id="user" class="inputLogin" type="text" class="form-control">
+              </div>
+              <div class="input-group">
+                  <span class="input-group-addon primary"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                  <input  id="mail" class="inputLogin" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input id="checkTerm" type="checkbox" class="form-check-input">
+                I agree to Lyft's <a href="#">Terms of Service</a> 
+              </label>
+            </div>        
+        </div>
+        <input class="btn btn-default btn-block next" type="submit" value="NEXT" disabled>
+      </div>        
+  </section>
+  <section class="success">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-6 logo center-block">
+          <img src="assets/img/logo-white.png" alt="">
+          <img src="assets/img/check.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- /inicio modal -->
+  <div class="modal fade" id="verifyCodeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Verify Code</h4>
+        </div>
+        <div class="modal-body">
+          <p>Tu código: LAB-<span id="random"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button id="codeButton" type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+      
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script src="assets/js/intlTelInput.js"></script>
+  <script src="assets/js/inputmask.js"></script>
+  
+  
+</body>
+</html>
